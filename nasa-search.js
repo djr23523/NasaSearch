@@ -16,7 +16,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
     return "nasa-search";
-
+  }
   constructor() {
     super();
     this.title = "";
