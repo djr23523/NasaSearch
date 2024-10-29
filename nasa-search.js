@@ -29,6 +29,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     this.loading = false;
     this.items = [];
     this.value = null;
+    this
     this.registerLocalization({
       context: this,
       localesPath:
@@ -55,7 +56,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     css`
       :host {
         display: block;
-        color: var(--ddd-theme-primary);
+        color: var(--ddd-theme-default-nittanyNavy);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
       }
@@ -65,6 +66,10 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
       }
       h3 span {
         font-size: var(--nasa-search-label-font-size, var(--ddd-font-size-s));
+      }
+      .results{
+        margin:var(--ddd-spacing-m-4);
+        padding:var(--ddd-spacing-p-4);
       }
     `];
   }
@@ -84,8 +89,8 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
       ${this.items.map((item, index) => html`
       <nasa-image
         source="${item.links[0].href}"
-        title="${item.data[0].title}"
-        sec_creator="${item.data}"
+        title="${item.data[0].title}" 
+        seccreator="${item.data[0].secondary_creator}"
       ></nasa-image>
       `)}
     </div>
