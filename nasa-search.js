@@ -69,7 +69,6 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
       }
       .results{
         margin:var(--ddd-spacing-m-4);
-        padding:var(--ddd-spacing-p-4);
       }
     `];
   }
